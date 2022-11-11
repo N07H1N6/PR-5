@@ -11,10 +11,11 @@ namespace PR_5
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             int x1,x2,y1,y2,AO,BO,x=0,y=0;// объявление переменных
             Console.WriteLine("Здравствуйте");
             Console.WriteLine("Практическая работа №5");
-            Console.Write("Введите две точки: \n");
+            Console.Write("Введите координаты двух точек: \n");
             Console.Write("x1= ");//Ввод данных
             x1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("x2= ");
@@ -27,13 +28,16 @@ namespace PR_5
 
             AO = (int)Math.Sqrt(Math.Pow(x1 - x, 2) + Math.Pow(y1 - y, 2));//расчет длины отрезка
             BO = (int)Math.Sqrt(Math.Pow(x2 - x, 2) + Math.Pow(y2 - y, 2));
+            Console.WriteLine("Длина отрезка AO:");
             Console.WriteLine(AO);
+            Console.WriteLine("Длина отрезка BO:");
             Console.WriteLine(BO);
-            if (AO < BO)
+            //Проверка условия
+            if (AO < BO)//если AO < BO,то
             {
                 Console.WriteLine("Точка B находиться ближе к началу координат");
             }
-            else if (AO > BO)
+            else if (AO > BO)//иначе
                  {
                      Console.WriteLine("Точка A находиться ближе к началу координат");
                  }
